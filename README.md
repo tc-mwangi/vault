@@ -34,6 +34,28 @@ until finished
 
 ## BDD
 
+### User Stories.
+The application covers the following scenarios:
+* create a Vault account with a login username and password.
+* store already existing account credentials.
+* create new account credentials with a generated password.
+* enter a password of their choice.
+* view various account credentials/ passwords in the application.
+* delete an account that in not needed. 
+
+
+|     | Behaviour    |          Input                 | Output    | 
+|--- | ---         |     ---      |          --- |
+|  1. | display a menu with navigation options    | login username & password      | git status    |
+|  2. | store existing account details   | git status     | git status    |
+|  3. | create new account details      | git diff       | git diff      |
+|  4. | generate passwords for new accounts   | git status     | git status    |
+|  5. | enable user-generated passwords for new accounts  | git status     | git status    |
+|  6. | view list of account details/passwords| git diff       | git diff      |
+
+
+
+
 > **Menu**
 
 > *"Howdy! Would you like to:"*
