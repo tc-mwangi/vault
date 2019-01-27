@@ -4,6 +4,14 @@ class User:
     """
 
     user_list = [] # Empty user list
+ # Init method up here
+    def save_user(self):
+
+        '''
+        save_user method saves user objects into user_list
+        '''
+
+        User.user_list.append(self)
 
     def __init__(self,first_name,last_name,user_name, user_password):
 
