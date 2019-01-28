@@ -3,7 +3,7 @@ class User:
     Class that creates new vault accounts for users.
     """
 
-    user_list = [] # class variable: can be accessed by all instances.
+    user_list = [] # directory of all registered users
  
     def save_user(self):
 
@@ -26,15 +26,32 @@ class User:
         self.user_password = user_password
 
 class Credentials:
+    
     """
-    Class that creates details for various online accounts and generates passwords/allows user passwords.
+    Class that creates details for online accounts and generates passwords/allows user passwords.
     """
 
-    credential_list = [] #
-    user_credential_list = [] #
+    credentials_list = [] #
+    user_credentials_list = [] #
 
-    def __init__(self,user_name, user_password):
+    @classmethod
+    def find_by_user_name(cls, user_name, user_password):
 
-        # instance variables
-        self.user_name = user_name
-        self.user_password = user_password
+        '''
+        method that checks whether user has a vault account i.e is in the user_list.
+        '''
+
+
+
+        
+
+
+
+
+    # def __init__(self, email, full_name, username, password):
+
+    #     # instance variables... Test with instagram
+    #     self.email = email
+    #     self.user_full_name = full_name
+    #     self.user_name = username
+    #     self.user_password = password

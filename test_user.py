@@ -18,7 +18,7 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user = User("Loise","Mwangi","tc-mwangi","peppermint92!") # create user object
 
-    # test1-create user
+    # test1-create user account
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
@@ -32,8 +32,8 @@ class TestUser(unittest.TestCase):
     # test2-save user
     def test_save_user(self):
         '''
-        test_save_user test case to test if the user  object is saved into
-         the user list.
+        test_save_user test case to test if the user object is saved into
+         the user_list.
         '''
         self.new_user.save_user() # saving the new user
         self.assertEqual(len(User.user_list),1)
@@ -54,6 +54,15 @@ class TestUser(unittest.TestCase):
         test_user = User("Test","user","tc-mwangi","peppermint92!") # new user
         test_user.save_user()
         self.assertEqual(len(User.user_list),2)
+
+     # test4-delete user account
+    def delete_user(self):
+        '''
+        test case to remove saved user acoount.
+        '''
+        User.user_list.remove(self)
+
+        
 
     
 
