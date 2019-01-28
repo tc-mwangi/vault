@@ -1,6 +1,6 @@
-import unittest # Importing the unittest module
-from credentials import User # Importing the user class
-# from credentials import Credentials # Importing the credentials class
+import unittest # Importing the unittest module.
+from accounts import User # Importing the User class
+from accounts import Credentials # Importing the Credentials class
 
 class TestUser(unittest.TestCase):
 
