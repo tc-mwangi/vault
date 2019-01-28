@@ -18,7 +18,7 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user = User("Loise","Mwangi","tc-mwangi","peppermint92!") # create user object
 
-
+    # test1-create user
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
@@ -29,7 +29,7 @@ class TestUser(unittest.TestCase):
         self.assertEqual(self.new_user.user_name,"tc-mwangi")
         self.assertEqual(self.new_user.user_password,"peppermint92!")
 
-    
+    # test2-save user
     def test_save_user(self):
         '''
         test_save_user test case to test if the user  object is saved into
@@ -37,6 +37,25 @@ class TestUser(unittest.TestCase):
         '''
         self.new_user.save_user() # saving the new user
         self.assertEqual(len(User.user_list),1)
+
+    # test3-save multiple users
+    def tearDown(self):
+        '''
+        tearDown method that cleans up after each test case has run.
+        '''
+        User.user_list = []
+        
+    def test_save_multiple_users(self):
+        '''
+        test_save_multiple_users to check if we can save multiple users
+        objects to our user_list
+        '''
+        self.new_user.save_user()
+        test_user = User("Test","user","tc-mwangi","peppermint92!") # new user
+        test_user.save_user()
+        self.assertEqual(len(User.user_list),2)
+
+    
 
 
 if __name__ == '__main__':
