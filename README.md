@@ -23,10 +23,16 @@ Steps
 Give the example
 ```
 
-And repeat
+Run program on terminal:
 
 ```
-until finished
+chmod +x run_vault.py
+```
+
+Open the program:
+
+```
+./run_vault.py
 ```
 
 

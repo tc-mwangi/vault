@@ -1,3 +1,4 @@
+# !/user/bin/env python3.7
 #imports
 from user_class import User
 from credentials_class import Credentials
@@ -25,21 +26,25 @@ def check_user(user_name,user_password):
 	'''
 	function checks to see if a user is registered in the user list.
 	'''
-	checking_user = Credentials.check_user(user_name,user_password)
-	return checking_user
+	verifying_user = Credentials.check_user(user_name,user_password)
+	return verifying_user
 
 def main():
     print("\n")
-    print("Welcome to Vault, your reliable account/password manager.")
-    print("\n")
+    print("Welcome to Vault.")
     while True:
+        print("\n")
         print("What would you like to do today?" )
         print("\n")
-        print(" [cv] - create vault account, [li] - log-in,  [ex] - exit vault")
+        print(" Navigation short codes: \n [cv] - create vault account, \n [li] - log-in, \n [ex] - exit vault")
         print("\n")
         short_code = input("Enter short code: ").lower()
 
-        if short_code == "cv":
+        if short_code == "ex":
+            break
+
+        elif short_code == "cv":
+            print("\n")
             #ask for details
             print("Enter the following details:")
             print ("First name ....")
@@ -54,15 +59,60 @@ def main():
             #save new user
             save_user(create_user(first_name, last_name, user_name, user_password))
             print(f'New vault Account Details: {first_name} {last_name} {user_name} using password: "{user_password}"')
-
+            
+            #next, log in user
         elif short_code == "li":
+            print ("Enter your login details")
             print ("Username ....")
             user_name = input()
             print ("Password ....")
             user_password = input()
 
             #verify user
-            check_user
+            user_in_list = check_user(user_name, user_password)
+
+            if user_in_list == user_name:
+                print("\n")
+                print(f"Welcome {first_name} {last_name}. What would you like to do?")
+                print(" ")
+                while True:
+                    print("[cc] - Create a New Credential, \n [dc] - Display Credentials, \n [del] - Delete Credential/s, \n [ex] - exit vault")
+
+                short_code = input("Enter short code: ").lower()
+                print("\n")
+
+                if short_code == "ex":
+                    print("\n")
+                    print(f"Bye {first_name} {last_name}.")
+
+            else:
+                  print("\n")
+                  print("User doesn't exist! Would you like to: ")
+                  print("[cv] - Create Vault Account or [ta] - Try Again")
+                  print("\n")
+                  short_code = input("Enter short code: ").lower()
+
+                
+
+            
+
+
+              
+           
+        elif short_code == "ex":
+            print("Good bye!")
+            break
+        else:
+            print("Please use the short codes provided !")    
+
+        
+            
+
+            # print("What would you like to do next?")
+            # print("[cc] - Create a new Credential, [dc] - Display Credentials")
+
+			 	
+            
 
             # user_exists = verify_user(user_name,password)
 			# if user_exists == user_name:
@@ -85,33 +135,7 @@ def main():
 			# 			account_name = input('Enter your account\'s name - ').strip()
 
         
-            
-
-        elif short_code == "ex":
-            print("Good bye!")
-            break
-        else:
-            print("Please use the short codes provided !")
-
-        
-
-        
-
-            
-           
-			
-
-
-
-        # elif short_code == "li":
-        #     #ask for login details
-        #     print("Vault Login")
-        #     print("\n")
-        #     print ("Username ....")
-        #     user_name = input()
-        #     print ("Password ....")
-        #     user_password = input()
-            
+                    
             
 if __name__ == '__main__':
 

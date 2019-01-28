@@ -3,7 +3,7 @@ class User:
     Class that creates new vault accounts for users.
     """
 
-    user_list = [] # directory of all registered users
+    users_list = [] # directory of all registered users
  
     def save_user(self):
 
@@ -11,7 +11,7 @@ class User:
         save_user method saves new vault users to user_list.
         '''
 
-        User.user_list.append(self)
+        User.users_list.append(self)
 
     def __init__(self,first_name,last_name,user_name, user_password):
         
