@@ -84,14 +84,14 @@ def main():
                 print(f"Welcome {user_name}. What would you like to do?")
                 print(" ")
                 while True:
-                    print("[cc] - Create a New Credential, \n [dc] - Display Credentials, \n [del] - Delete Credential/s, \n [ex] - exit vault")
+                    print("[cn] - Create a New Credential, \n [dc] - Display Credentials, \n [cc] - Copy Credential/s, \n [del] - Delete Credential/s, \n [ex] - exit vault")
                     short_code = input("Enter short code: ").lower()
                     print("\n")
                     if short_code == "ex":
                         print("\n")
                         print(f"Bye {first_name} {last_name}.")
 
-                    elif short_code == "cc":
+                    elif short_code == "cn":
                         print("Enter your online accont credentials")
                         print ("Account name...? eg. facebook, twitter, instagram")
                         account_name = input().strip
