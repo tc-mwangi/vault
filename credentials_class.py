@@ -12,11 +12,11 @@ class Credentials:
     @classmethod
     def check_user(cls, user_name, user_password):
         '''
-        method checks whether user is registered/is in the user_list.
+        method checks whether user is registered/is in the users_list.
         '''
-        this_user = "" #retrieve from user input
+        this_user = "" #empty string
         for user in User.users_list:
-            if(user.user_name == user_name and user_password == user_password):
+            if(user.user_name == user_name and user.user_password == user_password):
                 this_user = user.first_name
         return this_user
 
