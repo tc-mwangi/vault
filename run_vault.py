@@ -29,7 +29,14 @@ def check_user(user_name,user_password):
 	verifying_user = Credentials.check_user(user_name,user_password)
 	return verifying_user
 
-# create a new credential.
+# create a new credential function.
+def create_credential(account_name, account_user_name, account_user_email, account_user_password):
+	'''
+	Function to create a new credential
+	'''
+	new_credential = Credentials(account_name, account_user_name , account_user_email, account_user_password)
+	return new_credential
+
 
 
 def main():
@@ -118,37 +125,7 @@ def main():
             print("Please use the short codes provided !")    
 
         
-            
-
-            # print("What would you like to do next?")
-            # print("[cc] - Create a new Credential, [dc] - Display Credentials")
-
-                
-            
-
-            # user_exists = verify_user(user_name,password)
-            # if user_exists == user_name:
-            # 	print(" ")
-            # 	print(f'Welcome {user_name}. Please choose an option to continue.')
-            # 	print(' ')
-            # 	while True:
-            # 		print("-"*60)
-            # 		print('Navigation codes: \n cc-Create a Credential \n dc-Display Credentials \n copy-Copy Password \n ex-Exit')
-            # 		short_code = input('Enter a choice: ').lower().strip()
-            # 		print("-"*60)
-            # 		if short_code == 'ex':
-            # 			print(" ")
-            # 			print(f'Goodbye {user_name}')
-            # 			break
-            # 		elif short_code == 'cc':
-            # 			print(' ')
-            # 			print('Enter your credential details:')
-            # 			site_name = input('Enter the site\'s name- ').strip()
-            # 			account_name = input('Enter your account\'s name - ').strip()
-
-            # if short_code == "ex":
-            # print("Goodbye!:(")
-            # break
+        
                         
             
 if __name__ == '__main__':

@@ -27,6 +27,19 @@ class Credentials:
             # global users_list
             Credentials.credentials_list.append(self)
 
+    def __init__(self, account_name, account_user_name, account_user_email, account_user_password ):
+            '''
+            method that creates new instances of credential.
+            '''
+
+            # instance variables
+            self.account_name = account_name
+            self.account_user_name = account_user_name
+            self.account_user_email = account_user_email
+            self.account_user_password = account_user_password
+
+
+
 
 
 
