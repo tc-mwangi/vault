@@ -20,6 +20,13 @@ class Credentials:
                 this_user = user.first_name
         return this_user
 
+    def save_credentials(self):
+            '''
+            function to save new user
+            '''
+            # global users_list
+            Credentials.credentials_list.append(self)
+
 
 
 

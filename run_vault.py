@@ -29,6 +29,9 @@ def check_user(user_name,user_password):
 	verifying_user = Credentials.check_user(user_name,user_password)
 	return verifying_user
 
+# create a new credential.
+
+
 def main():
     print("\n")
     print("Welcome to Vault.")
@@ -83,6 +86,16 @@ def main():
 
                     elif short_code == "cc":
                         print("Enter your online accont credentials")
+                        print ("Account name...? eg. facebook, twitter, instagram")
+                        account_name = input()
+                        print("Account username...?")
+                        account_user_name = input()
+                        print("Account email...?")
+                        account_user_email = input()
+                        print("Account password...?")
+                        account_user_password = input()
+
+
 
             else:
                     print("\n")
