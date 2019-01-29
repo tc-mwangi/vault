@@ -21,6 +21,14 @@ def save_user(user):
 	'''
 	User.save_user(user)
 
+# create a new credential function.
+def create_credentials(account_name, account_user_name, account_user_email, account_user_password):
+	'''
+	Function to create a new credential
+	'''
+	new_credential = Credentials(account_name, account_user_name , account_user_email, account_user_password)
+	return new_credential
+
 # verify user before they can proceed to create credentials.
 def check_user(user_name,user_password):
 	'''
@@ -28,14 +36,6 @@ def check_user(user_name,user_password):
 	'''
 	verifying_user = Credentials.check_user(user_name,user_password)
 	return verifying_user
-
-# create a new credential function.
-def create_credential(account_name, account_user_name, account_user_email, account_user_password):
-	'''
-	Function to create a new credential
-	'''
-	new_credential = Credentials(account_name, account_user_name , account_user_email, account_user_password)
-	return new_credential
 
 
 
@@ -94,7 +94,7 @@ def main():
                     elif short_code == "cc":
                         print("Enter your online accont credentials")
                         print ("Account name...? eg. facebook, twitter, instagram")
-                        account_name = input()
+                        account_name = input().strip
                         print("Account username...?")
                         account_user_name = input()
                         print("Account email...?")
