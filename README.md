@@ -24,6 +24,11 @@ On Average, a person has at least 7 different accounts he or she has signed into
 
 ### Steps
 
+* Clone the app in a directory using this on terminal.
+```
+git clone https://github.com/tc-mwangi/vault.git
+```
+
 * Run program on terminal:
 
 ```
